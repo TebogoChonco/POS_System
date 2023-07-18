@@ -2,9 +2,11 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 }
+
 body {
     background-color: rgb(233, 218, 220);
 }
+
 .item {
     margin: 5px;
     padding: 30px;

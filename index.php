@@ -96,8 +96,6 @@ if (isset($_POST['selectedItemValue'])) {
         
     });
 }
-
- 
     </script>
 </body>
 </html>

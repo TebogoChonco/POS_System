@@ -45,42 +45,29 @@
 
     <hr>
 
-   <!--  <h2>Items Purchased:</h2>
+<h2>Items Purchased:</h2>
 
-    <ul>
-        <li>item 1</li>
-        <li>item 2</li>
-        <li>item 3</li>
-    </ul>
- -->
+<ul>
+    <li>item 1</li>
+    <li>item 2</li>
+    <li>item 3</li>
+</ul>
 
- <?php
-    // Display the items in the shopping cart
-    if (count($_SESSION['shoppingCart']) > 0) {
-        echo '<ul>';
-        foreach ($_SESSION['shoppingCart'] as $item) {
-            echo '<li>' . $item . '</li>';
-        }
-        echo '</ul>';
-    } else {
-        echo '<p>Your shopping cart is empty.</p>';
-    }
-    ?>
-    <hr>
+<hr>
 
-    <h2>
-        Amount: R<span>0.00</span>
-        <br>
-        VAT Amount: R <span>0.00</span>
-        <br>
-        <br>
-        Subtotal for all items: R<span>0.00</span>
-    </h2>
+<h2>
+    Amount: R<span>0.00</span>
+    <br>
+    VAT Amount: R <span>0.00</span>
+    <br>
+    <br>
+    Subtotal for all items: R<span>0.00</span>
+</h2>
 
-    <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="get">
-        <button style="background-color:pink" type="submit" name="payment">Pay with card</button>
-        <button style="background-color:cornflowerblue" type="submit" name="payment">Pay with cash</button>
-    </form>
+<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="get">
+    <button style="background-color:pink" type="submit" name="payment">Pay with card</button>
+    <button style="background-color:cornflowerblue" type="submit" name="payment">Pay with cash</button>
+</form>
 
 </body>
 
