@@ -2,7 +2,7 @@
 
 $items = [ 
     [
-        "img" => "LGTV.jpg",
+        "img" => "./static/img/LGTV.jpg",
         "name" => "LG TV",
         "price" => 100,
         "barcode" => 18367
@@ -56,3 +56,5 @@ $items = [
         "barcode" => 13204
     ]
 ];
+
+return $items;

@@ -25,7 +25,7 @@ if (isset($_POST['selectedItemValue'])) {
 </head>
 <body>
     <h1>
-        <span style="color:pink">Select and</span> <span style="color:grey">Save</span>
+        <span style="color:palevioletred">Select and</span> <span style="color:grey">Save</span>
     </h1>
 
     <hr>
@@ -72,17 +72,32 @@ if (isset($_POST['selectedItemValue'])) {
         var button = document.createElement('button');
         button.setAttribute('type', 'submit');
         button.setAttribute('name', 'selectedItemValue');
-        button.setAttribute('value', item);
+        button.setAttribute('value', item.name);
         button.classList.add('item');
 
-        var h3 = document.createElement('h3');
-        h3.textContent = item.name; // Access the name property of the item
+        var image = document.createElement('img');
+        image.setAttribute('src', item.image);
+        button.appendChild(image);
 
-        button.appendChild(h3);
+        var itemName = document.createElement('h3');
+        itemName.textContent = item.name;
+        button.appendChild(itemName);
+
+        var price = document.createElement('p');
+        price.textContent = 'Price: R' + item.price.toFixed(2); // Format price as desired
+        button.appendChild(price);
+
+        var barcode = document.createElement('p');
+        barcode.textContent = 'Barcode: ' + item.barcode;
+        button.appendChild(barcode);
+
         itemsContainer.appendChild(button);
+
+        
     });
 }
 
+ 
     </script>
 </body>
 </html>
